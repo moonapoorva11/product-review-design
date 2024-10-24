@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product review design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #main-product-img{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 2px double rgb(76, 74, 74);
+            box-shadow: 0px 0px 15px 0px rgb(95, 93, 93);
+            display: block;
+            margin: 30px auto;
+
+        }
+        .product-image-cantainer{
+            display: flex;
+            justify-content: center;
+        }
+        .product-img{
+            width: 90px;
+            height: 90px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            object-fit: cover;
+            padding: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="eariing 1_.jpg" id="main-product-img"/>
+
+    <div class="product-image-cantainer">
+        <img src="earing 2_.jpg" class="product-img" onclick="changeImage(1)"/>
+        <img src="earing 3_.jpg" class="product-img" onclick="changeImage(2)"/>
+        <img src="earing4_.jpg" class="product-img" onclick="changeImage(3)"/>
+        <img src="earing5_.jpg" class="product-img" onclick="changeImage(4)"/>
+    </div>
+ 
+ <script>
+      function changeImage(num){
+      const mainImage =  document.getElementById("main-product-img");
+
+      if(num==1){
+        mainImage.src = "earing 2_.jpg" ;
+     
+    }else if(num==2){
+        mainImage.src = "earing 3_.jpg" ;
+        
+    }else if(num==3){
+        mainImage.src = "earing4_.jpg" ;
+    }else if(num==4){
+        mainImage.src = "earing5_.jpg" ;
+    }
+
+
+}
+  
+  </script>  
+</body>
+</html>
